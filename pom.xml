@@ -5,15 +5,15 @@
 
     <parent>
         <groupId>com.funtl</groupId>
-        <artifactId>hello-spring-cloud-dependencies</artifactId>
+        <artifactId>itoken-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
+        <relativePath>../itoken-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-zuul</artifactId>
+    <artifactId>itoken-zuul</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-zuul</name>
+    <name>itoken-zuul</name>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
@@ -41,6 +41,14 @@
         <!-- Spring Cloud Begin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
         <dependency>
@@ -48,11 +56,8 @@
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
         <!-- Spring Cloud End -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
 
+        <!-- Spring Boot Admin Begin -->
         <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
@@ -61,6 +66,7 @@
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
+        <!-- Spring Boot Admin End -->
     </dependencies>
 
     <build>
@@ -69,7 +75,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.hello.spring.cloud.zuul.ZuulApplication</mainClass>
+                    <mainClass>com.funtl.itoken.zuul.ZuulApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
